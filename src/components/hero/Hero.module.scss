@@ -1,0 +1,16 @@
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0)), url("../../assets/hero.png");
+    width: auto;
+    height: 628px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 3.5rem 4rem;
+}
+
+.heroText {
+  position: absolute;
+  bottom: 5.1875rem;
+  max-width: 36.8125rem;
+}

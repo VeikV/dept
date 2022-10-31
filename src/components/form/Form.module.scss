@@ -1,0 +1,75 @@
+.container {
+  display: grid;
+  grid-template-columns: .5fr 2fr;
+  padding: 3.625rem;
+  grid-column-gap: 4rem;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(50%));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 2.375rem;
+  grid-template-areas:
+  "name email"
+  "message ."
+  "button .";
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 18.43rem;
+  &.name {
+    grid-area: name;
+  }
+  &.email {
+    grid-area: email;
+  }
+  &.message {
+    grid-area: message;
+  }
+}
+
+.label {
+  padding-bottom: .75rem;
+}
+
+.input {
+  border-bottom: 1px solid var(--dept-light-grey);
+  transition: border .3s ease;
+  &:focus {
+    border-color: var(--dept-grey)
+  }
+  &:hover {
+    border-color: var(--dept-grey)
+  }
+}
+
+.button {
+  grid-area: button;
+  border: 1px solid var(--dept-black);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.9rem;
+  height: 3.125rem;
+  margin-top: 2.375rem;
+  cursor: pointer;
+  transition: all .3s ease;
+  &:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+}
+
+.error {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  margin-top: .5rem;
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+.typography {
+  font-family: inherit;
+  color: var(--dept-white);
+  font-weight: 400;
+  &.xxs {
+    font-size: var(--dept-font-size-xxs);
+    line-height: var(--dept-font-size-xxs);
+  }
+  &.xs {
+    font-size: var(--dept-font-size-xs);
+    line-height: var(--dept-font-size-xs);
+  }
+  &.s {
+    font-size: var(--dept-font-size-s);
+    line-height: var(--dept-font-size-s);
+  }
+  &.m {
+    font-size: var(--dept-font-size-m);
+    line-height: var(--dept-font-size-m);
+  }
+  &.l {
+    font-size: var(--dept-font-size-l);
+    line-height: var(--dept-font-size-l);
+  }
+}

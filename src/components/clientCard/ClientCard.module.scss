@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-end;
+}
+
+.image, .text {
+  grid-row: 1;
+  grid-column: 1
+}
+.image {
+  object-fit: cover;
+  max-height: 35.5rem;
+  z-index: 2;
+  width: 100%;
+}
+
+.text {
+  padding: 2rem;
+  z-index: 11;
+}
+
+.imageGradient {
+  z-index: 10;
+  max-height: 35.5rem;
+  height: 100%;
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1;
+  background: linear-gradient(358.53deg, rgba(0, 0, 0, 0.33) 1.79%, rgba(0, 0, 0, 0) 99.33%);
+}
+

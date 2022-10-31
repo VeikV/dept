@@ -1,0 +1,15 @@
+.container {
+  background-color: var(--dept-black);
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divider {
+  background-color: var(--dept-white);
+  height: .16rem;
+  width: 100%;
+  margin-top: 2.25rem;
+  margin-bottom: 2rem;
+}

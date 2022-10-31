@@ -1,0 +1,40 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.footerContent {
+  background-color: var(--dept-black);
+  padding: 7.76rem 3.14rem;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3.75rem;
+  margin-bottom: 2.8rem;
+  border-bottom: 1px solid var(--dept-dark-grey);
+}
+
+.info {
+  display: flex;
+}
+
+.scrollTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 7.3rem;
+  cursor: pointer;
+  &:hover {
+    animation: shaking 1s infinite;
+  }
+}
+
+@keyframes shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}

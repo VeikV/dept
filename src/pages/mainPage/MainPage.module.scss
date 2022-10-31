@@ -1,0 +1,22 @@
+.filters {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionClientCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  &.noRows {
+    grid-template-rows: none;
+  }
+}
+
+.sectionClientNotes {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  &.reverse {
+    grid-template-columns: 1fr 2fr;
+  }
+}

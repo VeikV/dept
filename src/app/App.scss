@@ -1,0 +1,28 @@
+@use 'scss/reset.scss';
+
+:root {
+  --dept-header-height: 7.1875rem;
+  --dept-header-min-height: 3.5rem;
+  --dept-black: #121212;
+  --dept-default-black: #000;
+  --dept-white: #fff;
+  --dept-grey: #a3a3a3;
+  --dept-light-grey: #ddd;
+  --dept-dark-grey: #808080;
+  --dept-red: #ff2929;
+  --dept-purple: #5115f7;
+  --dept-font-weight-light: 300;
+  --dept-font-weight-medium: 400;
+  --dept-font-weight-bold: 700;
+  --dept-font-size-xxs: 1rem;
+  --dept-font-size-xs: 1.125rem;
+  --dept-font-size-s: 1.625rem;
+  --dept-font-size-m: 2.125rem;
+  --dept-font-size-l: 3rem;
+
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}

@@ -1,0 +1,49 @@
+@import 'scss/mixins.scss';
+
+.circle {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  border: 1px solid var(--dept-white);
+  display: inline-block;
+  position: relative;
+  margin-right: .75rem;
+  transition: all .3s ease;
+}
+
+.innerCircle {
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  border: 1px solid var(--dept-white);
+  background-color: var(--dept-white);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  --line-color: var(--dept-white);
+  &.dark {
+    --line-color: var(--dept-black);
+  }
+  &:hover {
+    .circle {
+      transform: scale(1.4);
+    }
+    .text {
+      &:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.text {
+  @include link(var(--line-color));
+}

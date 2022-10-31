@@ -1,0 +1,72 @@
+.headerContainer {
+  background-color: var(--dept-black);
+  height: var(--dept-header-height);
+  transition: height .3s ease-in-out;
+  &.open {
+    height: 100vh;
+  }
+}
+
+.header {
+  height: var(--dept-header-height);
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 1fr 2fr .5fr;
+  padding: 0 3.5rem;
+  align-items: center;
+}
+
+.menuToggle {
+  color: var(--dept-white);
+  justify-self: end;
+  margin-left: 6rem;
+  cursor: pointer;
+  &:hover {
+    .dot {
+      width: .6rem;
+      height: .6rem;
+      box-shadow: 1px 1px 10px -1px rgba(255,255,255,0.79);
+      &.middle {
+        margin: 0 .35rem;
+      }
+    }
+  }
+  &.open {
+    position: relative;
+  }
+}
+
+.dot {
+  border-radius: 100%;
+  width: .5rem;
+  height: .5rem;
+  background-color: var(--dept-white);
+  display: inline-block;
+  transition: all .3s ease-in-out;
+  &.middle {
+    margin: 0 .25rem;
+  }
+}
+
+.crossLineContainer {
+  width: 1.046rem;
+  height: 1.046rem;
+}
+
+.crossLine {
+  height: .125rem;
+  width: 1.046rem;
+  position: absolute;
+  //margin-top: 24px;
+  display: inline-block;
+  background-color: var(--dept-white);
+  transition: all .3s ease-in;
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(-45deg);
+  }
+}
+
+

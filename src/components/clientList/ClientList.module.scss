@@ -1,0 +1,19 @@
+.container {
+  background-color: var(--dept-black);
+  padding: 5.75rem 2.6875rem;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 14.89rem;
+  row-gap: 5.1875rem;
+  max-width: 61.86rem;
+  margin: 0 auto;
+}
+
+.clientLogo {
+  width: 10.7rem;
+  height: 5.625rem;
+}
