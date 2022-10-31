@@ -1,10 +1,10 @@
-##React-app DEPT
+## React-app DEPT
 
-###How to start:
+### How to start:
 `npm start ` - run project locally   
 `npm run build ` - build minified version
 
-###Additional-info:
+### Additional-info:
 - This project is using:
   - React 18v + Typescript
     - react-query for api requests. As an example client notes are rendered from mock backend
