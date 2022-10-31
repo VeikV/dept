@@ -1,10 +1,23 @@
+@use 'scss/variables';
+
 .footer {
   display: grid;
   grid-template-columns: 1fr auto;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    position: relative;
+  }
+
 }
 .footerContent {
   background-color: var(--dept-black);
   padding: 7.76rem 3.14rem;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    padding: 2.25rem 2.8rem;
+  }
+}
+
+.logo {
+  margin-right: 7.4rem;
 }
 
 .menu {
@@ -17,6 +30,9 @@
 
 .info {
   display: flex;
+  @media screen and (max-width: variables.$tablet) {
+    flex-direction: column;
+  }
 }
 
 .scrollTop {
@@ -28,6 +44,11 @@
   cursor: pointer;
   &:hover {
     animation: shaking 1s infinite;
+  }
+  @media screen and (max-width: variables.$tabletLandscape) {
+    position: absolute;
+    top: 1rem;
+    right: 0;
   }
 }
 

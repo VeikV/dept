@@ -1,14 +1,57 @@
+@use 'scss/variables';
+
 .navigation {
+  grid-area: navigation;
   display: grid;
   grid-auto-flow: column;
   column-gap: 3rem;
-  margin-left: 6rem;
-  &.open {
+  &.row {
     grid-auto-flow: row;
+    column-gap: 0;
+    row-gap: 3rem;
+  }
+  &.open {
+    justify-items: end;
+    @media screen and (max-width: variables.$tabletLandscape) {
+      margin-top: 3rem;
+    }
   }
 }
 
 .item {
   color: var(--dept-white);
   text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: right;
+  position: relative;
+  &.active {
+    .itemText {
+      position: relative;
+      display: inline-block;
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        left: -3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: .65rem 0 .65rem 1.5rem;
+        border-color: transparent transparent transparent var(--dept-white);
+      }
+    }
+  }
+  @media screen and (max-width: variables.$tabletLandscape) {
+    &.active {
+      .itemText {
+        &:before {
+          left: -2rem;
+          border-width: .5rem 0 .5rem .65rem;
+        }
+      }
+    }
+  }
 }

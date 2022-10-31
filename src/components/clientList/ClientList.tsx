@@ -14,7 +14,7 @@ export const ClientList = () => {
       </Typography>
       <div className={styles.clients}>
         {clients.map(clientLogo => (
-          <img className={styles.clientLogo} src={clientLogo} alt="client-logo" />
+          <img key={clientLogo} className={styles.clientLogo} src={clientLogo} alt="client-logo" />
         ))}
       </div>
     </div>

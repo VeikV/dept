@@ -1,3 +1,5 @@
+@use 'scss/variables';
+
 .container {
   background-color: var(--dept-black);
   padding: 0 4rem;
@@ -6,4 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    height: 26rem;
+  }
 }

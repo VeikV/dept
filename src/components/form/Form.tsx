@@ -3,10 +3,14 @@ import { useState } from 'react'
 
 import styles from 'components/form/Form.module.scss'
 import { Typography } from 'components/typography/Typography'
+import { useViewport } from 'hooks/useViewport'
 
 export const Form = () => {
   const [emailValue, setEmailValue] = useState('')
   const [isError, setIsError] = useState(false)
+  const { isTabletLandscape } = useViewport()
+
+  const formHeadingSize = isTabletLandscape ? 's' : 'l'
 
   const checkEmail = (e: React.SyntheticEvent) => {
     if (emailValue.length > 0) {
@@ -19,7 +23,7 @@ export const Form = () => {
 
   return (
     <div className={styles.container}>
-      <Typography tag="h3" variant="l" style={{ color: 'var(--dept-black)', textTransform: 'uppercase' }}>
+      <Typography tag="h3" variant={formHeadingSize} style={{ color: 'var(--dept-black)', textTransform: 'uppercase' }}>
         Question? We are here to help!
       </Typography>
       <form className={styles.formContainer} onSubmit={checkEmail}>

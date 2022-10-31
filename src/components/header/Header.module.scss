@@ -1,9 +1,30 @@
+@use 'scss/variables';
+
 .headerContainer {
+  position: fixed;
+  top: 0;
   background-color: var(--dept-black);
   height: var(--dept-header-height);
+  width: 100%;
+  z-index: 1000;
+  padding: 0 3.5rem;
   transition: height .3s ease-in-out;
   &.open {
+    position: fixed;
     height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+  @media screen and (max-width: variables.$tabletLandscape) {
+    background-color: var(--dept-white);
+    height: var(--dept-header-min-height);
+    &.open {
+      background-color: var(--dept-black);
+    }
+  }
+  @media screen and (max-width: variables.$mobile) {
+    padding: 0 1.5rem;
   }
 }
 
@@ -11,20 +32,31 @@
   height: var(--dept-header-height);
   background-color: inherit;
   display: grid;
-  grid-template-columns: 1fr 2fr .5fr;
-  padding: 0 3.5rem;
+  grid-template-columns: 1fr 1fr 2.5rem;
+  grid-template-areas: "logo navigation menu";
+  grid-column-gap: 6rem;
   align-items: center;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    height: var(--dept-header-min-height);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    max-width: 3.3rem;
+  }
 }
 
 .menuToggle {
+  grid-area: menu;
   color: var(--dept-white);
   justify-self: end;
-  margin-left: 6rem;
   cursor: pointer;
+  margin-top: -4px;
   &:hover {
     .dot {
-      width: .6rem;
-      height: .6rem;
       box-shadow: 1px 1px 10px -1px rgba(255,255,255,0.79);
       &.middle {
         margin: 0 .35rem;
@@ -55,9 +87,9 @@
 
 .crossLine {
   height: .125rem;
-  width: 1.046rem;
+  width: 1.3rem;
   position: absolute;
-  //margin-top: 24px;
+  top: .4rem;
   display: inline-block;
   background-color: var(--dept-white);
   transition: all .3s ease-in;
@@ -66,6 +98,38 @@
   }
   &.right {
     transform: rotate(-45deg);
+  }
+}
+
+.language {
+  position: absolute;
+  color: var(--dept-white);
+  background-color: var(--dept-black);
+  top: var(--dept-header-height);
+  z-index: 1001;
+  cursor: pointer;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    top: var(--dept-header-min-height);
+  }
+}
+
+.languageItem {
+  position: relative;
+  &.active {
+    padding-left: 1.2rem;
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: .3rem 0 .3rem .6rem;
+      border-color: transparent transparent transparent var(--dept-white);
+    }
   }
 }
 

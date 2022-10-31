@@ -11,27 +11,7 @@ import takeaway from 'assets/takeaway.svg'
 import tesla from 'assets/tesla.svg'
 import triumph from 'assets/triumph.svg'
 
-export const navigation = ['Work', 'Culture', 'Services', 'Insights', 'Careers', 'Contact']
-
-export const clientNotes1 = [
-  {
-    clientName: 'MICROSOFT',
-    clientDescription:
-      'Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels',
-    link: '',
-  },
-  {
-    clientName: 'O’NEILL',
-    clientDescription: 'Integrating existing content into O’Neills’s new e-commerce platform',
-    link: '',
-  },
-  {
-    clientName: 'MICROSOFT',
-    clientDescription:
-      'Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels',
-    link: '',
-  },
-]
+export const navigation = ['work', 'culture', 'services', 'insights', 'careers', 'contact']
 
 export const clients = [
   google,

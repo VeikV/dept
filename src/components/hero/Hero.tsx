@@ -1,6 +1,4 @@
-import { motion, useAnimation } from 'framer-motion'
-import { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 import styles from 'components/hero/Hero.module.scss'
 import { Typography } from 'components/typography/Typography'

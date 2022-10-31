@@ -1,3 +1,3 @@
 export enum ApiQueryKeys {
-  CONFIG = 'config',
+  GET_NOTES = 'get-notes',
 }

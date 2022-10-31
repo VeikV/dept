@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "home": "Home",
+    "work": "Work",
+    "culture": "Culture",
+    "services": "Services",
+    "insights": "Insights",
+    "careers": "Careers",
+    "contact": "Contact"
+  }
+}

@@ -1,8 +1,14 @@
+@use 'scss/variables';
+
 .filters {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
-}
+    @media screen and (max-width: variables.$tabletLandscape) {
+      background-color: var(--dept-black);
+      flex-direction: row-reverse;
+    }
+  }
 
 .sectionClientCard {
   display: grid;
@@ -11,6 +17,9 @@
   &.noRows {
     grid-template-rows: none;
   }
+  @media screen and (max-width: variables.$mobile) {
+    grid-template-columns: 1fr
+  }
 }
 
 .sectionClientNotes {
@@ -18,5 +27,11 @@
   grid-template-columns: 2fr 1fr;
   &.reverse {
     grid-template-columns: 1fr 2fr;
+    @media screen and (max-width: variables.$tabletLandscape) {
+      grid-template-columns: 1fr
+    }
+  }
+  @media screen and (max-width: variables.$tabletLandscape) {
+    grid-template-columns: 1fr
   }
 }

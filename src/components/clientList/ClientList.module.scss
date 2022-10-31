@@ -1,6 +1,12 @@
+@use 'scss/variables';
+
 .container {
   background-color: var(--dept-black);
   padding: 5.75rem 2.6875rem;
+  @media screen and (max-width: variables.$tablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .clients {
@@ -11,9 +17,20 @@
   row-gap: 5.1875rem;
   max-width: 61.86rem;
   margin: 0 auto;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    column-gap: 8rem;
+  }
+  @media screen and (max-width: variables.$tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  @media screen and (max-width: variables.$tabletLandscape) {
+    column-gap: 4rem;
+  }
 }
 
 .clientLogo {
   width: 10.7rem;
   height: 5.625rem;
+  justify-self: center;
 }

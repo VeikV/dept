@@ -1,14 +1,22 @@
+@use 'scss/variables';
+
 .container {
   background-color: var(--dept-black);
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: variables.$tabletLandscape) {
+    padding: 2rem;
+  }
+  @media screen and (max-width: variables.$mobile) {
+    padding: 1.5rem;
+  }
 }
 
 .divider {
   background-color: var(--dept-white);
-  height: .16rem;
+  height: 1px;
   width: 100%;
   margin-top: 2.25rem;
   margin-bottom: 2rem;

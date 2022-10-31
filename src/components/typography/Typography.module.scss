@@ -2,6 +2,7 @@
   font-family: inherit;
   color: var(--dept-white);
   font-weight: 400;
+  transition: font-size 0.3s ease;
   &.xxs {
     font-size: var(--dept-font-size-xxs);
     line-height: var(--dept-font-size-xxs);
@@ -21,5 +22,9 @@
   &.l {
     font-size: var(--dept-font-size-l);
     line-height: var(--dept-font-size-l);
+  }
+  &.xl {
+    font-size: var(--dept-font-size-xl);
+    line-height: var(--dept-font-size-xl);
   }
 }

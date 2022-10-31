@@ -5,35 +5,45 @@ import logo from 'assets/logo.svg'
 import styles from 'components/footer/Footer.module.scss'
 import { Navigation } from 'components/navigation/Navigation'
 import { Typography } from 'components/typography/Typography'
+import { useViewport } from 'hooks/useViewport'
 
 export const Footer = () => {
   const scroll = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
+  const { isTablet, isTabletLandscape } = useViewport()
+  const infoTextPadding = isTabletLandscape ? '1rem' : '2.25rem'
+  const infoTextLastItemMargin = isTablet ? '1.5rem 0 0 0' : '0 0 0 auto'
 
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.menu}>
-          <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link>
-          <Navigation />
+          {!isTabletLandscape && (
+            <Link to="/">
+              <img className={styles.logo} src={logo} alt="logo" />
+            </Link>
+          )}
+          <Navigation isGridRow={isTablet} />
         </div>
         <div className={styles.info}>
-          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: '2.25rem' }}>
+          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: infoTextPadding }}>
             Chamber of Commerce: 63464101
           </Typography>
-          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: '2.25rem' }}>
+          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: infoTextPadding }}>
             VAT: NL 8552.47.502.B01
           </Typography>
-          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: '2.25rem' }}>
+          <Typography tag="p" variant="xxs" style={{ color: 'var(--dept-dark-grey)', paddingRight: infoTextPadding }}>
             Terms and conditions
           </Typography>
           <Typography
             tag="p"
             variant="xxs"
-            style={{ color: 'var(--dept-dark-grey)', marginLeft: 'auto', paddingRight: '2.25rem' }}
+            style={{
+              color: 'var(--dept-dark-grey)',
+              margin: infoTextLastItemMargin,
+              paddingRight: infoTextPadding,
+            }}
           >
             © 2022 Dept Agency
           </Typography>

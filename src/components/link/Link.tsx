@@ -11,6 +11,7 @@ interface Props {
   variant: 'xxs' | 'xs' | 's' | 'm' | 'l'
   style?: React.CSSProperties
   isDark?: boolean
+  isActive?: boolean
 }
 
 export const CustomLink = ({
@@ -20,6 +21,7 @@ export const CustomLink = ({
   tag,
   variant,
   style,
+  isActive,
   ...attrs
 }: Props & AllHTMLAttributes<any>) => {
   return (
@@ -30,7 +32,7 @@ export const CustomLink = ({
             <span className={styles.innerCircle} />
           </span>
         )}
-        <span className={styles.text}>{text}</span>
+        <span className={clsx(styles.text, { [styles.active]: isActive })}>{text}</span>
       </span>
     </Typography>
   )

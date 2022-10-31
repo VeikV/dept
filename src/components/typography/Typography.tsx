@@ -5,7 +5,7 @@ import styles from 'components/typography/Typography.module.scss'
 
 interface Props {
   tag: 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'div' | 'a'
-  variant: 'xxs' | 'xs' | 's' | 'm' | 'l'
+  variant: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl'
   children?: JSX.Element | string
   style?: React.CSSProperties
 }
