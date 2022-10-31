@@ -23,8 +23,10 @@
   text-transform: uppercase;
   display: block;
   width: 100%;
-  text-align: right;
   position: relative;
+  &.align {
+    text-align: right;
+  }
   &.active {
     .itemText {
       position: relative;

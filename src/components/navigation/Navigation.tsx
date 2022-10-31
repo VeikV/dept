@@ -38,7 +38,7 @@ export const Navigation = ({ isOpen, isGridRow, setIsOpen }: Props) => {
           initial="hidden"
           animate="visible"
           variants={textVariant}
-          className={clsx(styles.item, { [styles.active]: isActiveLink('') })}
+          className={clsx(styles.item, { [styles.active]: isActiveLink(''), [styles.align]: isOpen })}
         >
           <Link to="/" onClick={setIsOpen}>
             <>
@@ -58,7 +58,7 @@ export const Navigation = ({ isOpen, isGridRow, setIsOpen }: Props) => {
           initial="hidden"
           animate="visible"
           variants={textVariant}
-          className={clsx(styles.item, { [styles.active]: isActiveLink(item) })}
+          className={clsx(styles.item, { [styles.active]: isActiveLink(item), [styles.align]: isOpen })}
           key={item}
         >
           <Link to={`/${item.toLowerCase()}`} onClick={setIsOpen}>
